@@ -31,7 +31,7 @@ for n, line in enumerate(file):
 
             # if there are end characters at the beginning put them on the previous line
             if match[2]:
-                file[lastLine] += match[2]
+                file[lastLine] = file[lastLine][:-1] + match[2] + '\n'
 
             # the main part which doesn't move after
             body = ""
